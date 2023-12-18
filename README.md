@@ -6,7 +6,7 @@ The steps performed are:
 1. Three libraries namely dplyr, derivmkts and RND are needed to achieve this objective
 2. Any given day's NIFTY derivatives data can be used. Download the same from NSE's website: https://www.nseindia.com/all-reports. The name of the report is Bhavcopy
 3. Implied Volatility requires Spot price, Option Price, Rate of Return, Time till Expiry and Dividend.
-4. The spot price is derived from NIFTY futures prices as in S = F * exp (- rate * Time till Expiry). This will ensure that dividend is considered.
+4. The spot price is derived from NIFTY futures prices as in S = F * exp (- rate * Time till Expiry). This will ensure that dividend is considered. This also means that Expiries without a Futures contract shall be excluded from the exercise as the dividend adjustment for such contract is a much more rigorous exercise which will require a separate model to be built.
 5. For the purpose of computing Implied volatility, only the liquid OTM contracts are chosen. There are many ways to determine liquidity, for this specific project we shall use median of contracts traded. This shall include all Options contracts that have been traded more than the median.
 6. Now, Implied Volatility can be computed for the liquid OTM options.
 7. For Sticky Delta, Strike Price / Spot Price shall be computed. This is also termed as Moneyness of a contract.
