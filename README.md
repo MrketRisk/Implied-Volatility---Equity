@@ -7,7 +7,7 @@ The steps performed are:
 2. Any given day's NIFTY derivatives data can be used. Download the same from NSE's website: https://www.nseindia.com/all-reports. The name of the report is Bhavcopy
 3. Implied Volatility requires Spot price, Option Price, Rate of Return, Time till Expiry and Dividend.
 4. The spot price is derived from NIFTY futures prices as in S = F * exp (- rate * Time till Expiry). This will ensure that dividend is considered. This also means that Expiries without a Futures contract shall be excluded from the exercise as the dividend adjustment for such contract is a much more rigorous exercise which will require a separate model to be built.
-5. For the purpose of computing Implied volatility, only the liquid OTM contracts are chosen. There are many ways to determine liquidity, for this specific project we shall use median of contracts traded. This shall include all Options contracts that have been traded more than the median.
-6. Now, Implied Volatility can be computed for the liquid OTM options.
+5. For the purpose of computing Implied volatility, only the liquid OTM contracts are chosen. There are many ways to determine liquidity, for this specific project we shall use median of contracts traded. This shall include all Options contracts that have been traded more than the median number of contracts traded.
+6. Next step is the computation of Implied Volatility for the liquid OTM options.
 7. For Sticky Delta, Strike Price / Spot Price shall be computed. This is also termed as Moneyness of a contract.
-8. A quadratic fit shall be established between Moneyness and Implied Volatility. This shall provide coefficients using which the Implied Vol of all the Options shall be computed. Note: The coefficients shall be separately computed for each expiry. The same was achieved by a for loop.
+8. A quadratic fit shall be established between Moneyness and Implied Volatility. This shall provide coefficients for the quadratic curve using which the Implied Vol of all the Options shall be computed. Note: The coefficients shall be separately computed for each expiry. The same was achieved by a for loop.
