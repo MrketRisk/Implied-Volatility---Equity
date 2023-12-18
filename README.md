@@ -1,8 +1,8 @@
-IV Quadratic Fit with respect to Moneyness of an option (Sticky Delta) in R
+IV Quadratic Fit with respect to Moneyness of an option (Sticky Delta) in R.
 This is a simple project to demonstrate how a Quadratic Equation can fit a Implied Vol curve.
 The purpose is to use OTM Liquid strikes to fit a quadratic IV curve and then utilize the coefficients of the same curve to compute the IV of less liquid strikes. It can have further implications towards modelling volatility under various assumptions but that is out of scope for this assignment.
-We shall use R to achieve this objective. The assumption here is that the concept of Implied Volatility is well understood along with the concept of sticky delta. More resources can be found in wikipedia
-Steps Performed:
+We shall use R to achieve this objective. The assumption here is that the concept of Implied Volatility is well understood along with the concept of sticky delta. More resources can be found in wikipedia.
+The steps performed are:
 1. Three libraries namely dplyr, derivmkts and RND are needed to achieve this objective
 2. Any given day's NIFTY derivatives data can be used. Download the same from NSE's website: https://www.nseindia.com/all-reports. The name of the report is Bhavcopy
 3. Implied Volatility requires Spot price, Option Price, Rate of Return, Time till Expiry and Dividend.
